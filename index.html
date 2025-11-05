@@ -53,6 +53,18 @@
         html, body {
             overflow-y: auto !important;
         }
+        .container-carrosel{
+            min-height: 800px;
+            max-height: 800px;
+        }
+
+        .carousel-inner{
+            min-height: 800px;
+            max-height: 800px;  
+        }
+        .display-4{
+            margin-bottom: 50px;
+        }
 
         header {
             background: #171718;
@@ -64,6 +76,170 @@
             align-items: center;
             justify-content: center;
             scroll-snap-align: start;
+        }
+
+        /* Estilos do Carrossel */
+        .carousel-content {
+            padding: 40px 0;
+            animation: fadeInUp 0.8s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Estabilização das imagens durante transições */
+        .carousel-item .carousel-image {
+            opacity: 1;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+
+        .carousel-item.carousel-item-next .carousel-image,
+        .carousel-item.carousel-item-prev .carousel-image {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+
+        .carousel-item h1 {
+            background: linear-gradient(45deg, #00b4d8, #0077b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: none;
+        }
+
+        .carousel-item .lead {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            color: #e0e0e0;
+            margin-top: 15px;
+        }
+
+        /* Imagens do carrossel */
+        .carousel-image {
+            width: 1080px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.1);
+            margin: 30px auto 0;
+            display: block;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+        /* Indicadores customizados */
+        .carousel-indicators {
+            bottom: 30px;
+            margin-bottom: 0;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(0, 180, 216, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators .active {
+            background-color: #00b4d8;
+            box-shadow: 0 0 20px #00b4d8;
+            transform: scale(1.2);
+        }
+
+        /* Controles customizados */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 180, 216, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev {
+            left: 30px;
+        }
+
+        .carousel-control-next {
+            right: 30px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(0, 180, 216, 0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade do carrossel */
+        @media (max-width: 768px) {
+            .carousel-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-content .lead {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-image {
+                width: 250px;
+                height: 160px;
+                margin: 20px auto 0;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .carousel-control-prev {
+                left: 15px;
+            }
+            
+            .carousel-control-next {
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-image {
+                width: 200px;
+                height: 130px;
+            }
         }
 
         section {
@@ -765,9 +941,66 @@
 
     <!-- Home -->
     <header id="home">
-        <div class="container">
-            <h1 class="display-4 fw-bold">2AS Usinagem & Modelagem 3D</h1>
-            <p class="lead mt-3">Precisão, tecnologia e qualidade em cada detalhe.</p>
+        <div class="container container-carrosel d-flex justify-content-center align-items-center">
+            <!-- Carrossel Bootstrap -->
+            <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-content text-center">
+                            <h1 class="display-4 fw-bold mb-4">2AS Usinagem & Modelagem 3D</h1>
+                            <p class="lead">Precisão, tecnologia e qualidade em cada detalhe.</p>
+                            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Usinagem de precisão" class="carousel-image">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content text-center">
+                            <h1 class="display-4 fw-bold mb-4">Inovação em Usinagem</h1>
+                            <p class="lead">Transformando suas ideias em realidade com alta precisão.</p>
+                            <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Máquina CNC" class="carousel-image">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content text-center">
+                            <h1 class="display-4 fw-bold mb-4">Modelagem 3D Avançada</h1>
+                            <p class="lead">Protótipos e peças customizadas para todos os setores.</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vrpt3pTTy3tL_5jMMRhcaZQcabGxPMKYig&s" alt="Impressão 3D" class="carousel-image">
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content text-center">
+                            <h1 class="display-4 fw-bold mb-4">Excelência Técnica</h1>
+                            <p class="lead">Soluções industriais com acabamento impecável.</p>
+                            <img src="https://www.hagane.com.br/blog/wp-content/uploads/2023/06/usinagem-saiba-tudo-sobre-esse-processo.jpg" alt="Peças de precisão" class="carousel-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles
+                <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button> -->
+            </div>
         </div>
     </header>
 
@@ -786,7 +1019,7 @@
                         exposure="1.2"    
                         shadow-intensity="2"
                         field-of-view="30deg"
-                        style="width:50%; height:300px; background:transparent; box-shadow: none;"
+                        style="width:100%; height:500px; background:transparent; box-shadow: none;"
                         interaction-prompt="none"
                         disable-zoom>
                     </model-viewer>
@@ -1138,7 +1371,7 @@
 
     <!-- Seção de Localização e Footer -->
     <section id="footer-section">
-        <div class="container">
+        <div class="container container-carrosel">
             <div class="row align-items-center h-100">
                 <!-- Coluna do Mapa -->
                 <div class="col-lg-8 text-center mb-5 mb-lg-0">
@@ -1195,7 +1428,7 @@
 
         <!-- Footer interno -->
         <footer class="internal-footer">
-            <div class="container">
+            <div class="container-carrosel">
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start">
                         <p class="mb-0">&copy; 2025 2AS Usinagem e Modelagem 3D. Todos os direitos reservados.</p>
