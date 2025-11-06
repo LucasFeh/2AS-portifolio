@@ -98,13 +98,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             height: 100%;
             min-height: 500px;
         }
 
         .carousel-item {
             transition: transform 0.6s ease-in-out;
+        }
+        .carousel-slide{
+            min-width: 100%;
         }
 
         /* Estabilização das imagens durante transições */
@@ -148,6 +151,7 @@
             flex-shrink: 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
 
 
         /* Indicadores customizados */
@@ -894,7 +898,8 @@
                 max-height: 100vh;
                 padding: 20px 10px;
                 display: flex;
-                align-items: center;
+                justify-content: start !important; 
+                align-items: start !important;
             }
             
             .carousel-inner {
@@ -915,21 +920,23 @@
             }
             
             .carousel-item h1 {
+                min-height: 90px;
                 font-size: 1.8rem;
-                margin-bottom: 15px;
                 line-height: 1.2;
             }
             
             .carousel-item .lead {
+                min-height: 100px;
                 font-size: 1rem;
                 margin-top: 10px;
             }
             
             .carousel-image {
                 width: 100%;
-                max-width: 320px;
-                height: 200px;
-                margin: 20px auto 0;
+                max-width: 420px;
+                height: 300px;
+                margin: 0px auto 0;
+                border-radius: 0px;
             }
             
             /* Seção Sobre */
@@ -976,22 +983,22 @@
             .sidebar-content {
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 10px;
                 justify-content: center;
+                gap: 40px;
             }
             
             .sidebar-tab {
-                flex: 1;
                 min-width: 140px;
                 max-width: 160px;
-                padding: 10px 8px;
-                margin-bottom: 5px;
+                padding: 0px 0px;
+                margin-bottom: 0px;
                 text-align: center;
                 font-size: 0.75rem;
             }
             
             .sidebar-tab .tab-number {
-                font-size: 1rem;
+                display: none;
+
             }
             
             .sidebar-tab .tab-description {
@@ -1122,7 +1129,7 @@
             
             /* Indicadores menores */
             .carousel-indicators {
-                bottom: -5px;
+                bottom: 15px;
             }
             
             .carousel-indicators [data-bs-target] {
@@ -1229,7 +1236,7 @@
     <header id="home">
         <div class="container container-carrosel d-flex justify-content-center align-items-center">
             <!-- Carrossel Bootstrap -->
-            <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div id="headerCarousel" class="carousel-slide carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <!-- Indicadores -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -1261,7 +1268,7 @@
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                         <div class="carousel-content text-center">
-                            <h1 class="display-4 fw-bold mb-4">Modelagem 3D Avançada</h1>
+                            <h1 class="display-3 fw-bold mb-4">Modelagem 3D Avançada</h1>
                             <p class="lead">Protótipos e peças customizadas para todos os setores.</p>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vrpt3pTTy3tL_5jMMRhcaZQcabGxPMKYig&s" alt="Impressão 3D" class="carousel-image">
                         </div>
