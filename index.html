@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2AS Usinagem e Modelagem 3D</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="/src/logo.png">
     <link rel="shortcut icon" type="image/jpeg" href="/src/logo.png">
@@ -15,24 +15,29 @@
     <style>
         html {
             /* Remove a barra de rolagem do html também */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
         }
-        
+
         /* Remove a barra de rolagem no webkit para html */
         html::-webkit-scrollbar {
             display: none;
         }
-        
+
         body {
             overflow-x: hidden;
             scroll-snap-type: y mandatory;
             /* Remove a barra de rolagem */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
-            font-size: 16px; /* Base font size for better mobile readability */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+            font-size: 16px;
+            /* Base font size for better mobile readability */
         }
-        
+
         /* Remove a barra de rolagem no webkit */
         body::-webkit-scrollbar {
             display: none;
@@ -43,7 +48,7 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
-        
+
         *::-webkit-scrollbar {
             display: none;
             width: 0 !important;
@@ -51,31 +56,35 @@
         }
 
         /* Remove scroll de qualquer elemento */
-        html, body {
+        html,
+        body {
             overflow-y: auto !important;
         }
-        
+
         /* Garante que todas as imagens sejam responsivas */
         img {
             max-width: 100%;
             height: auto;
         }
-        
+
         /* Container responsivo */
-        .container, .container-fluid {
+        .container,
+        .container-fluid {
             max-width: 100%;
             overflow-x: hidden;
         }
-        .container-carrosel{
+
+        .container-carrosel {
             min-height: 800px;
             max-height: 800px;
         }
 
-        .carousel-inner{
+        .carousel-inner {
             min-height: 800px;
-            max-height: 800px;  
+            max-height: 800px;
         }
-        .display-4{
+
+        .display-4 {
             margin-bottom: 50px;
         }
 
@@ -106,7 +115,8 @@
         .carousel-item {
             transition: transform 0.6s ease-in-out;
         }
-        .carousel-slide{
+
+        .carousel-slide {
             min-width: 100%;
         }
 
@@ -152,6 +162,15 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .carrossel_2 {
+            object-position: 25% 70%;
+            ;
+        }
+
+        .carrossel_4 {
+            object-position: 25% 80%;
+            ;
+        }
 
 
         /* Indicadores customizados */
@@ -214,6 +233,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -245,21 +265,21 @@
         }
 
         .project-card img {
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover img {
-            transform: scale(1.05);
+            max-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .project-card {
             transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
         }
+
+        /* .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+        } */
 
         /* Sidebar Styles */
         .projects-sidebar {
@@ -329,6 +349,7 @@
             display: flex;
             align-items: center;
         }
+
         .project-category {
             width: 100%;
         }
@@ -421,6 +442,7 @@
             from {
                 transform: rotate(0deg);
             }
+
             to {
                 transform: rotate(360deg);
             }
@@ -430,6 +452,7 @@
             from {
                 transform: rotate(360deg);
             }
+
             to {
                 transform: rotate(0deg);
             }
@@ -486,6 +509,12 @@
             background: linear-gradient(135deg, #FF6B6B, #EE5A52);
         }
 
+        #Cliente-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:50px; 
+        }
         /* Estilos dos perfis profissionais */
         .profile-card {
             background: white;
@@ -500,10 +529,6 @@
             align-items: center;
         }
 
-        .profile-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
 
         .profile-photo-container {
             position: relative;
@@ -516,7 +541,7 @@
             height: 200px;
             border-radius: 20px;
             overflow: hidden;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            background: white;
         }
 
         .profile-photo img {
@@ -569,7 +594,8 @@
             margin-bottom: 8px;
         }
 
-        .profile-crea, .profile-specialty {
+        .profile-crea,
+        .profile-specialty {
             font-size: 0.95em;
             color: #666;
             margin-bottom: 20px;
@@ -749,7 +775,7 @@
         }
 
 
-        
+
         /* Navegação por pontos */
         .scroll-navigation {
             position: fixed;
@@ -761,7 +787,7 @@
             flex-direction: column;
             gap: 15px;
         }
-        
+
         .scroll-dot {
             width: 12px;
             height: 12px;
@@ -772,18 +798,18 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .scroll-dot:hover {
             background: rgba(0, 180, 216, 0.3);
             transform: scale(1.2);
         }
-        
+
         .scroll-dot.active {
             background: #00b4d8;
             box-shadow: 0 0 20px #00b4d8, 0 0 40px #00b4d8;
             animation: glow 2s ease-in-out infinite alternate;
         }
-        
+
         .scroll-dot.active::before {
             content: '';
             position: absolute;
@@ -795,31 +821,34 @@
             border: 2px solid #00b4d8;
             animation: pulse 2s ease-in-out infinite;
         }
-        
+
         @keyframes glow {
             from {
                 box-shadow: 0 0 20px #00b4d8, 0 0 40px #00b4d8;
             }
+
             to {
                 box-shadow: 0 0 30px #00b4d8, 0 0 60px #00b4d8, 0 0 80px #00b4d8;
             }
         }
-        
+
         @keyframes pulse {
             0% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.5);
                 opacity: 0.5;
             }
+
             100% {
                 transform: scale(2);
                 opacity: 0;
             }
         }
-        
+
         /* Tooltip para os pontos */
         .scroll-dot::after {
             content: attr(data-tooltip);
@@ -837,15 +866,16 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        
+
         .scroll-dot:hover::after {
             opacity: 1;
         }
-        
+
         .projects-sidebar {
             min-height: 100%;
             max-width: 100%;
-            overflow-x: auto; /* Permite scroll horizontal em mobile se necessário */
+            overflow-x: auto;
+            /* Permite scroll horizontal em mobile se necessário */
         }
 
         /* Responsividade para tablets */
@@ -854,31 +884,31 @@
                 width: 350px;
                 height: 250px;
             }
-            
+
             #footer-section {
                 padding: 40px 0 0 0;
                 text-align: center;
             }
-            
+
             .quick-contact {
                 align-items: center;
             }
-            
+
             .contact-btn {
                 width: 200px;
             }
-            
+
             .carousel-image {
                 width: 100%;
                 max-width: 600px;
                 height: 300px;
             }
-            
+
             .projects-sidebar {
                 width: 250px;
                 min-width: 250px;
             }
-            
+
             .sidebar-tab {
                 padding: 12px 15px;
                 font-size: 0.9em;
@@ -887,28 +917,29 @@
 
         /* Responsividade para smartphones */
         @media (max-width: 480px) {
+
             /* Header e Carrossel */
             header {
                 padding: 50px 0;
                 min-height: 100vh;
             }
-            
+
             .container-carrosel {
                 min-height: 100vh;
                 max-height: 100vh;
                 padding: 20px 10px;
                 display: flex;
-                justify-content: start !important; 
+                justify-content: start !important;
                 align-items: start !important;
             }
-            
+
             .carousel-inner {
                 min-height: 90vh;
                 max-height: 90vh;
                 display: flex;
                 align-items: center;
             }
-            
+
             .carousel-content {
                 padding: 20px 0;
                 min-height: 100%;
@@ -918,19 +949,19 @@
                 justify-content: center;
                 align-items: center;
             }
-            
+
             .carousel-item h1 {
                 min-height: 90px;
                 font-size: 1.8rem;
                 line-height: 1.2;
             }
-            
+
             .carousel-item .lead {
                 min-height: 100px;
                 font-size: 1rem;
                 margin-top: 10px;
             }
-            
+
             .carousel-image {
                 width: 100%;
                 max-width: 420px;
@@ -938,39 +969,39 @@
                 margin: 0px auto 0;
                 border-radius: 0px;
             }
-            
+
             /* Seção Sobre */
             #sobre {
                 padding: 40px 0;
             }
-            
+
             #sobre .row {
                 flex-direction: column-reverse;
             }
-            
+
             #sobre model-viewer {
                 height: 300px !important;
                 width: 100% !important;
                 margin-bottom: 20px;
             }
-            
+
             #sobre h2 {
                 font-size: 1.5rem;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            
+
             #sobre p {
                 font-size: 0.9rem;
                 text-align: center;
                 margin-bottom: 15px;
             }
-            
+
             /* Seção Projetos */
             #projetos .row {
                 flex-direction: column;
             }
-            
+
             .projects-sidebar {
                 width: 100%;
                 min-width: 100%;
@@ -979,14 +1010,14 @@
                 padding: 15px;
                 background: linear-gradient(135deg, #000000 0%, #0d1b2a 100%);
             }
-            
+
             .sidebar-content {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 40px;
             }
-            
+
             .sidebar-tab {
                 min-width: 140px;
                 max-width: 160px;
@@ -995,116 +1026,128 @@
                 text-align: center;
                 font-size: 0.75rem;
             }
-            
+
             .sidebar-tab .tab-number {
                 display: none;
 
             }
-            
+
             .sidebar-tab .tab-description {
                 font-size: 0.7rem;
                 margin-top: 2px;
             }
-            
+
+            .card-project-img {
+                border-radius: 10px;
+            }
+
             .projects-content {
                 padding: 20px 15px;
                 min-height: auto;
             }
-            
+
             .project-card {
                 margin-bottom: 20px;
             }
-            
+
             .project-card .card-body {
                 padding: 15px;
             }
-            
+
+            .card-body img {
+                width: 100%;
+                max-height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
             .project-card h5 {
                 font-size: 1rem;
                 margin-bottom: 10px;
             }
-            
+
             .project-card p {
                 font-size: 0.85rem;
                 margin-bottom: 10px;
             }
-            
+
             .project-card model-viewer {
                 height: 200px !important;
             }
-            
+
             /* Seção Contato */
             #contato {
                 padding: 40px 0;
             }
-            
+
             #contato h2 {
                 font-size: 1.5rem;
                 margin-bottom: 30px;
             }
-            
+
             .profile-card {
                 padding: 20px;
                 margin-bottom: 30px;
             }
-            
+
             .profile-photo {
                 width: 150px;
                 height: 150px;
             }
-            
+
             .profile-name {
                 font-size: 1.2rem;
             }
-            
+
             .profile-profession {
                 font-size: 1rem;
             }
-            
-            .profile-crea, .profile-specialty {
+
+            .profile-crea,
+            .profile-specialty {
                 font-size: 0.85rem;
             }
-            
+
             .contact-item {
                 padding: 6px 12px;
                 font-size: 0.8rem;
             }
-            
+
             .contact-item span {
                 font-size: 0.8rem;
             }
-            
+
             /* Footer */
             #footer-section {
                 padding: 30px 0 0 0;
             }
-            
+
             .map-container-large iframe {
                 width: 300px;
                 height: 200px;
             }
-            
+
             .address-text-large {
                 font-size: 0.9rem;
                 margin-top: 15px;
             }
-            
+
             .company-info h3 {
                 font-size: 1.3rem;
                 margin-bottom: 15px;
             }
-            
+
             .company-info p {
                 font-size: 0.85rem;
                 margin-bottom: 15px;
             }
-            
+
             .contact-btn {
                 width: 180px;
                 padding: 10px 15px;
                 font-size: 0.85rem;
             }
-            
+
             /* Controles do carrossel menores em mobile */
             .carousel-control-prev,
             .carousel-control-next {
@@ -1112,80 +1155,84 @@
                 height: 40px;
                 top: 45%;
             }
-            
+
             .carousel-control-prev {
                 left: 10px;
             }
-            
+
             .carousel-control-next {
                 right: 10px;
             }
-            
+
             .carousel-control-prev-icon,
             .carousel-control-next-icon {
                 width: 16px;
                 height: 16px;
             }
-            
+
             /* Indicadores menores */
             .carousel-indicators {
                 bottom: 15px;
             }
-            
+
             .carousel-indicators [data-bs-target] {
                 width: 8px;
                 height: 8px;
             }
-            
+
             /* Navegação por pontos */
             .scroll-navigation {
                 display: none !important;
             }
-            
+
             /* Melhor espaçamento para texto */
             section {
                 padding: 40px 0;
             }
-            
+
             /* Touch targets maiores para melhor usabilidade */
-            .sidebar-tab, .contact-btn, .contact-item {
-                min-height: 44px; /* Apple recommended touch target size */
+            .sidebar-tab,
+            .contact-btn,
+            .contact-item {
+                min-height: 44px;
+                /* Apple recommended touch target size */
             }
-            
+
             .scroll-dot {
                 width: 10px;
                 height: 10px;
             }
-            
+
             .scroll-dot::after {
-                display: none; /* Remove tooltips em mobile */
+                display: none;
+                /* Remove tooltips em mobile */
             }
-            
+
             /* Engrenagens de fundo menores */
             .background-gear.gear-1 {
                 font-size: 80px;
                 width: 80px;
                 height: 80px;
             }
-            
+
             .background-gear.gear-2 {
                 font-size: 100px;
                 width: 100px;
                 height: 100px;
             }
-            
+
             .background-gear.gear-3 {
                 font-size: 60px;
                 width: 60px;
                 height: 60px;
             }
-            
+
             .background-gear.gear-4 {
                 font-size: 90px;
                 width: 90px;
                 height: 90px;
             }
-            
+
             .background-gear.gear-5 {
                 font-size: 50px;
                 width: 50px;
@@ -1193,23 +1240,39 @@
             }
         }
 
-    
-        </style>
+        /* Animação lateral para os ícones de clientes */
+        .client-logo {
+            opacity: 0;
+            transform: translateX(-80px);
+            transition: opacity 0.7s cubic-bezier(.77, 0, .18, 1), transform 0.7s cubic-bezier(.77, 0, .18, 1);
+        }
+
+        .client-logo.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .client-logo.animate-out {
+            opacity: 0;
+            transform: translateX(80px);
+        }
+    </style>
 </head>
 
 <body>
     <!-- Engrenagens Girando no Background -->
-    <div class="background-gear gear-1">⚙</div>
+    <!-- <div class="background-gear gear-1">⚙</div>
     <div class="background-gear gear-2">⚙</div>
     <div class="background-gear gear-3">⚙</div>
     <div class="background-gear gear-4">⚙</div>
-    <div class="background-gear gear-5">⚙</div>
-    
+    <div class="background-gear gear-5">⚙</div> -->
+
     <!-- Navegação por pontos -->
     <div class="scroll-navigation">
         <div class="scroll-dot active" data-tooltip="Início" onclick="scrollToSection('home')"></div>
         <div class="scroll-dot" data-tooltip="Sobre" onclick="scrollToSection('sobre')"></div>
         <div class="scroll-dot" data-tooltip="Projetos" onclick="scrollToSection('projetos')"></div>
+        <div class="scroll-dot" data-tooltip="Clientes" onclick="scrollToSection('Cliente-section')"></div>
         <div class="scroll-dot" data-tooltip="Contato" onclick="scrollToSection('contato')"></div>
         <div class="scroll-dot" data-tooltip="Footer" onclick="scrollToSection('footer-section')"></div>
     </div>
@@ -1236,13 +1299,18 @@
     <header id="home">
         <div class="container container-carrosel d-flex justify-content-center align-items-center">
             <!-- Carrossel Bootstrap -->
-            <div id="headerCarousel" class="carousel-slide carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div id="headerCarousel" class="carousel-slide carousel slide" data-bs-ride="carousel"
+                data-bs-interval="4000">
                 <!-- Indicadores -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
                 </div>
 
                 <!-- Slides -->
@@ -1250,9 +1318,10 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <div class="carousel-content text-center">
-                            <h1 class="display-4 fw-bold mb-4">2AS Usinagem & Modelagem 3D</h1>
+                            <h1 class="display-4 fw-bold mb-4">2AS Engenharia e Soluções Metalúrgicas</h1>
                             <p class="lead">Precisão, tecnologia e qualidade em cada detalhe.</p>
-                            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Usinagem de precisão" class="carousel-image">
+                            <img src="src/Imagem_carrosel.jpg" alt="Usinagem de precisão"
+                                class="carousel-image carrossel_1 modal-image">
                         </div>
                     </div>
 
@@ -1261,7 +1330,8 @@
                         <div class="carousel-content text-center">
                             <h1 class="display-4 fw-bold mb-4">Inovação em Usinagem</h1>
                             <p class="lead">Transformando suas ideias em realidade com alta precisão.</p>
-                            <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Máquina CNC" class="carousel-image">
+                            <img src="src/imagem_carrosel2.jpg" alt="Máquina CNC"
+                                class="carousel-image carrossel_2 modal-image">
                         </div>
                     </div>
 
@@ -1270,7 +1340,8 @@
                         <div class="carousel-content text-center">
                             <h1 class="display-3 fw-bold mb-4">Modelagem 3D Avançada</h1>
                             <p class="lead">Protótipos e peças customizadas para todos os setores.</p>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vrpt3pTTy3tL_5jMMRhcaZQcabGxPMKYig&s" alt="Impressão 3D" class="carousel-image">
+                            <img src="src/imagem_carrosel3.jpg" alt="Impressão 3D"
+                                class="carousel-image carrossel_3 modal-image">
                         </div>
                     </div>
 
@@ -1279,7 +1350,8 @@
                         <div class="carousel-content text-center">
                             <h1 class="display-4 fw-bold mb-4">Excelência Técnica</h1>
                             <p class="lead">Soluções industriais com acabamento impecável.</p>
-                            <img src="https://www.hagane.com.br/blog/wp-content/uploads/2023/06/usinagem-saiba-tudo-sobre-esse-processo.jpg" alt="Peças de precisão" class="carousel-image">
+                            <img src="src/imagem_carrosel4.jpg" alt="Peças de precisão"
+                                class="carousel-image carrossel_4 modal-image">
                         </div>
                     </div>
                 </div>
@@ -1302,19 +1374,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <model-viewer src="src/logo.glb" alt="Logo 2AS 3D"
-                        class="demo-viewer"
-                        auto-rotate 
-                        camera-orbit="45deg 60deg 120%"
-                        min-camera-orbit="auto 20deg auto"
-                        max-camera-orbit="auto 140deg auto"
-                        environment-image="neutral"
-                        exposure="1.2"    
-                        shadow-intensity="2"
-                        field-of-view="30deg"
+                    <model-viewer src="src/logo.glb" alt="Logo 2AS 3D" class="demo-viewer" auto-rotate
+                        camera-orbit="45deg 60deg 120%" min-camera-orbit="auto 20deg auto"
+                        max-camera-orbit="auto 140deg auto" environment-image="neutral" exposure="1.2"
+                        shadow-intensity="2" field-of-view="30deg"
                         style="width:100%; height:500px; background:transparent; box-shadow: none;"
-                        interaction-prompt="none"
-                        disable-zoom>
+                        interaction-prompt="none" disable-zoom>
                     </model-viewer>
                 </div>
                 <div class="col-md-6">
@@ -1349,32 +1414,32 @@
 
                             <button class="sidebar-tab active" onclick="showProjects('industrial')">
                                 <span class="tab-number">01</span>
-                                <span class="tab-description">Peças Industriais</span>
+                                <span class="tab-description">Usinagem</span>
                             </button>
 
                             <button class="sidebar-tab" onclick="showProjects('automotive')">
                                 <span class="tab-number">02</span>
-                                <span class="tab-description">Componentes Automotivos</span>
+                                <span class="tab-description">Caldeiraria</span>
                             </button>
 
                             <button class="sidebar-tab" onclick="showProjects('medical')">
                                 <span class="tab-number">03</span>
-                                <span class="tab-description">Equipamentos Médicos</span>
+                                <span class="tab-description">Inspeção</span>
                             </button>
 
                             <button class="sidebar-tab" onclick="showProjects('aerospace')">
                                 <span class="tab-number">04</span>
-                                <span class="tab-description">Peças Aeroespaciais</span>
+                                <span class="tab-description">Projetos Mecânicos</span>
                             </button>
 
                             <button class="sidebar-tab" onclick="showProjects('prototypes')">
                                 <span class="tab-number">05</span>
-                                <span class="tab-description">Protótipos Especiais</span>
+                                <span class="tab-description">Impressão 3D</span>
                             </button>
 
                             <button class="sidebar-tab" onclick="showProjects('tools')">
                                 <span class="tab-number">06</span>
-                                <span class="tab-description">Ferramentas Customizadas</span>
+                                <span class="tab-description">APRESENTAÇÃO</span>
                             </button>
                         </div>
                     </div>
@@ -1389,27 +1454,21 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center bg-light">
-                                            <h5 class="card-title">Engrenagem de Precisão</h5>
-                                            <p class="card-text">Engrenagem usinada com tolerâncias micrométricas para
-                                                aplicação industrial.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
-                                                alt="Engrenagem" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><img src="src/usinagem_render.jpg" alt=""
+                                                    style="object-fit: cover;" class="modal-image"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Eixo de Transmissão</h5>
-                                            <p class="card-text">Eixo forjado e usinado para equipamentos pesados
-                                                industriais.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb"
-                                                alt="Eixo" auto-rotate camera-controls
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">3D Model.</p>
+                                            <model-viewer src="src/USINAGEM - MANCAL.glb" alt="Eixo" auto-rotate
+                                                camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1423,14 +1482,11 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Pistão Personalizado</h5>
-                                            <p class="card-text">Pistão de alta performance para motores esportivos.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/DamagedHelmet.glb"
-                                                alt="Pistão" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><img src="src/caldeiraria_render.jpg" alt=""
+                                                    style="object-fit: cover;" class="modal-image"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1441,7 +1497,7 @@
                                             <p class="card-text">Suporte em alumínio aeronáutico para redução de peso.
                                             </p>
                                             <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                                                src="/src/caldeiraria.glb"
                                                 alt="Suporte" auto-rotate camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
@@ -1456,14 +1512,11 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Prótese Customizada</h5>
-                                            <p class="card-text">Prótese em titânio com acabamento biocompatível.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Prótese" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><img src="src/imagem_inspeção.jpg" alt=""
+                                                    style="object-fit: cover;" class="modal-image"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1474,8 +1527,8 @@
                                             <p class="card-text">Instrumento de precisão para procedimentos minimamente
                                                 invasivos.</p>
                                             <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Instrumento" auto-rotate camera-controls
+                                                src="src/compressor.glb"
+                                                alt="Instrumento" auto-rotate camera-controls autoplay
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1489,15 +1542,11 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Componente de Turbina</h5>
-                                            <p class="card-text">Pá de turbina em liga especial resistente a altas
-                                                temperaturas.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Turbina" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><img src="src/imagem_andaime.jpg" alt=""
+                                                    style="object-fit: cover;" class="modal-image"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1507,7 +1556,7 @@
                                             <h5 class="card-title">Estrutura Satelital</h5>
                                             <p class="card-text">Estrutura ultra-leve para aplicações espaciais.</p>
                                             <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                                                src="src/ANDAIME.glb"
                                                 alt="Satelital" auto-rotate camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
@@ -1522,15 +1571,11 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Protótipo Conceitual</h5>
-                                            <p class="card-text">Modelo funcional para validação de conceito de produto.
-                                            </p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Protótipo" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><img src="src/imagem_printer3D.jpg" alt=""
+                                                    style="object-fit: cover;" class="modal-image"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1541,7 +1586,7 @@
                                             <p class="card-text">Protótipo para testes de resistência e funcionalidade.
                                             </p>
                                             <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                                                src="src/PRINT 3D.glb"
                                                 alt="Teste" auto-rotate camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
@@ -1556,36 +1601,85 @@
                             <div class="row g-2 justify-content-center mx-0">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Matriz de Estampo</h5>
-                                            <p class="card-text">Matriz de alta precisão para conformação de chapas
-                                                metálicas.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Matriz" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><video src="src/video usinagem.mp4" controls style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">Ferramenta Especial</h5>
-                                            <p class="card-text">Ferramenta de corte customizada para aplicação
-                                                específica.</p>
-                                            <model-viewer
-                                                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                                                alt="Ferramenta" auto-rotate camera-controls
-                                                style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
-                                            </model-viewer>
+                                    <div class="card project-card border-0 shadow-sm h-100">
+                                        <div class="card-body text-center ">
+                                            <h5 class="card-title">Base com mancais</h5>
+                                            <p class="card-text">Foto real da peça.</p>
+                                            <div class="card-project-img "><video src="src/video_apresentação.mp4" controls style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video></div>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Clientes -->
+    <section id="Cliente-section" style=" background: linear-gradient(135deg, #171718 0%, #0d1b2a 100%); color: #fff;">
+        <h1 class="fw-bold text-center">Nossos Clientes</h1>
+        <div class="container py-5">
+            <div class="row row-cols-2 row-cols-sm-4 row-cols-md-4 g-4 justify-content-center align-items-center">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-building text-primary" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Empresa A</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-gear text-success" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Indústria B</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-cpu text-danger" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Tech C</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-truck text-warning" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Logística D</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-hospital text-info" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Saúde E</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-lightning-charge text-secondary" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Energia F</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-wrench-adjustable text-dark" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Serviços G</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="client-logo bg-light rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                        <i class="bi bi-globe text-primary" style="font-size: 2.5rem;"></i>
+                        <span class="mt-2 text-muted">Global H</span>
                     </div>
                 </div>
             </div>
@@ -1604,7 +1698,7 @@
                     <div class="profile-card">
                         <div class="profile-photo-container">
                             <div class="profile-photo">
-                                <img src="https://f.i.uol.com.br/fotografia/2022/07/14/165785281162d0d38b9f973_1657852811_3x2_rt.jpg" alt="Antônio C. Alfenas" class="img-fluid">
+                                <img src="/src/perfil_antonio.jpg" alt="Antônio C. Alfenas" class="img-fluid">
                                 <div class="photo-frame"></div>
                             </div>
                         </div>
@@ -1612,15 +1706,15 @@
                             <h4 class="profile-name">Antônio C. Alfenas</h4>
                             <p class="profile-profession">Engenheiro Mecânico</p>
                             <p class="profile-crea">CREA - MG249638/D</p>
-                            
+
                             <div class="contact-details">
-                                <a href="https://wa.me/553195554048?text=Olá%20Antônio!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS" 
-                                   class="contact-item" target="_blank">
+                                <a href="https://wa.me/553195554048?text=Olá%20Antônio!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS"
+                                    class="contact-item" target="_blank">
                                     <i class="bi bi-whatsapp contact-icon-small whatsapp"></i>
                                     <span>(31) 9555-4048</span>
                                 </a>
                                 <a href="mailto:Antonio2asengenharia@gmail.com?subject=Contato%20via%20Site%202AS&body=Olá%20Antônio,%0A%0AGostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS."
-                                   class="contact-item">
+                                    class="contact-item">
                                     <i class="bi bi-envelope-fill contact-icon-small email"></i>
                                     <span>Antonio2asengenharia@gmail.com</span>
                                 </a>
@@ -1634,7 +1728,7 @@
                     <div class="profile-card">
                         <div class="profile-photo-container">
                             <div class="profile-photo">
-                                <img src="https://veja.abril.com.br/wp-content/uploads/2016/06/alx_concurso-cachorro-20150626-05_original1.jpeg?quality=70&strip=info&w=817&w=636" alt="Samuel de Jesus Leite" class="img-fluid">
+                                <img src="src/perfil_samuel.jpg" alt="Samuel de Jesus Leite" class="img-fluid">
                                 <div class="photo-frame"></div>
                             </div>
                         </div>
@@ -1642,15 +1736,15 @@
                             <h4 class="profile-name">Samuel de Jesus Leite</h4>
                             <p class="profile-profession">Projetista Técnico Mecânico</p>
                             <p class="profile-specialty">Ênfase em Eixo Tecnológico e Processos Industriais</p>
-                            
+
                             <div class="contact-details">
-                                <a href="https://wa.me/5531993494776?text=Olá%20Samuel!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS" 
-                                   class="contact-item" target="_blank">
+                                <a href="https://wa.me/5531993494776?text=Olá%20Samuel!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS"
+                                    class="contact-item" target="_blank">
                                     <i class="bi bi-whatsapp contact-icon-small whatsapp"></i>
                                     <span>(31) 99349-4776</span>
                                 </a>
                                 <a href="mailto:projetosasengenharia@gmail.com?subject=Contato%20via%20Site%202AS&body=Olá%20Samuel,%0A%0AGostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%202AS."
-                                   class="contact-item">
+                                    class="contact-item">
                                     <i class="bi bi-envelope-fill contact-icon-small email"></i>
                                     <span>projetosasengenharia@gmail.com</span>
                                 </a>
@@ -1665,19 +1759,15 @@
     <!-- Seção de Localização e Footer -->
     <section id="footer-section">
         <div class="container">
-            <div class="row align-items-center h-100">
+            <div class="row align-items-center h-100 m-5">
                 <!-- Coluna do Mapa -->
                 <div class="col-lg-8 text-center mb-5 mb-lg-0">
                     <!-- <h2 class="mb-4 text-white">Como Chegar</h2> -->
                     <div class="map-container-large">
-                        <iframe 
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.7924!2d-44.0547!3d-19.9320!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU1JzU1LjIiUyA0NMKwMDMnMTcuMCJX!5e0!3m2!1spt-BR!2sbr!4v1699200000000!5m2!1spt-BR!2sbr"
-                            width="600" 
-                            height="400" 
-                            style="border:0; border-radius: 15px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                            width="600" height="400" style="border:0; border-radius: 15px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                     <div class="address-info mt-4">
@@ -1698,11 +1788,11 @@
                             Precisão, tecnologia e qualidade em cada detalhe.
                         </p>
                         <p class="text-light mb-4">
-                            Especializada na produção de peças técnicas sob medida, 
-                            combinando tecnologia de modelagem tridimensional com 
+                            Especializada na produção de peças técnicas sob medida,
+                            combinando tecnologia de modelagem tridimensional com
                             processos de usinagem de alta precisão.
                         </p>
-                        
+
                         <!-- Links de contato rápido -->
                         <div class="quick-contact">
                             <a href="https://wa.me/5531955540048" class="contact-btn whatsapp-btn" target="_blank">
@@ -1718,17 +1808,17 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Footer interno -->
         <footer class="internal-footer">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-4 text-center text-md-start">
                         <p class="mb-0">&copy; 2025 2AS Usinagem e Modelagem 3D. Todos os direitos reservados.</p>
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
+                    <div class="col-md-4 text-center text-md-end">
                         <p class="mb-0">
-                            <small>Desenvolvido por 
+                            <small>Desenvolvido por
                                 <a href="https://github.com/LucasFeh" target="_blank" class="developer-link">
                                     @LucasFeh
                                 </a>
@@ -1743,11 +1833,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
+    <!-- Modal para imagem do carrossel -->
+    <div id="carouselImageModal"
+        style="display:none;position:fixed;z-index:2000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+        <span id="closeCarouselModal"
+            style="position:absolute;top:30px;right:40px;font-size:3rem;color:#fff;cursor:pointer;z-index:2010;">&times;</span>
+        <img id="carouselModalImg" src="" alt="Imagem ampliada"
+            style="max-width:90vw;max-height:90vh;box-shadow:0 8px 40px #000;border-radius:12px;">
+    </div>
+
     <script>
+        // Modal de imagem do carrossel
+        document.addEventListener('DOMContentLoaded', function () {
+            // Adiciona evento de clique nas imagens do carrossel
+            document.querySelectorAll('.modal-image').forEach(function (img) {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', function () {
+                    var modal = document.getElementById('carouselImageModal');
+                    var modalImg = document.getElementById('carouselModalImg');
+                    modalImg.src = img.src;
+                    modal.style.display = 'flex';
+                });
+            });
+            // Fecha o modal ao clicar no X ou fora da imagem
+            document.getElementById('closeCarouselModal').onclick = function () {
+                document.getElementById('carouselImageModal').style.display = 'none';
+            };
+            document.getElementById('carouselImageModal').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
         // Variáveis para controle de scroll
         let isScrolling = false;
         let currentSectionIndex = 0;
-        const sections = ['home', 'sobre', 'projetos', 'contato', 'footer-section'];
+        const sections = ['home', 'sobre', 'projetos', 'Cliente-section', 'contato', 'footer-section'];
 
         // Função para mostrar projetos (mantida)
         function showProjects(category) {
@@ -1775,14 +1896,14 @@
             const section = document.getElementById(sectionId);
             if (section) {
                 isScrolling = true;
-                section.scrollIntoView({ 
+                section.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 // Atualizar o índice atual
                 currentSectionIndex = sections.indexOf(sectionId);
-                
+
                 // Liberar o scroll após a animação
                 setTimeout(() => {
                     isScrolling = false;
@@ -1835,7 +1956,7 @@
             // Verificar se o mouse está sobre um model-viewer
             const target = e.target;
             const modelViewer = target.closest('model-viewer');
-            
+
             // Se estiver sobre um model-viewer
             if (modelViewer) {
                 // Verificar se é o model-viewer demonstrativo (seção sobre)
@@ -1843,7 +1964,7 @@
                     // Para o model-viewer demonstrativo, sempre fazer scroll de página
                     e.preventDefault();
                     if (isScrolling) return;
-                    
+
                     if (e.deltaY > 0) {
                         goToNextSection();
                     } else {
@@ -1851,17 +1972,17 @@
                     }
                     return;
                 }
-                
+
                 // Para outros model-viewers, permitir o zoom nativo
                 return;
             }
-            
+
             // Prevenir o scroll padrão apenas se não estiver sobre model-viewer
             e.preventDefault();
-            
+
             // Se já estiver fazendo scroll, ignorar
             if (isScrolling) return;
-            
+
             // Determinar direção do scroll
             if (e.deltaY > 0) {
                 // Scroll para baixo - próxima seção
@@ -1873,10 +1994,10 @@
         }
 
         // Atualizar links da navbar para usar scroll suave
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = this.getAttribute('href').substring(1);
                     scrollToSection(target);
@@ -1885,15 +2006,15 @@
 
             // Adicionar controle de scroll do mouse
             window.addEventListener('wheel', handleWheel, { passive: false });
-            
+
             // Detectar mudanças no scroll (apenas para atualizar indicadores)
             window.addEventListener('scroll', updateActiveSection);
-            
+
             // Atualizar seção ativa na inicialização
             updateActiveSection();
 
             // Controle por teclado (opcional)
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'ArrowDown' || e.key === 'PageDown') {
                     e.preventDefault();
                     goToNextSection();
@@ -1911,10 +2032,10 @@
                     if (viewer.classList.contains('demo-viewer')) {
                         return;
                     }
-                    
+
                     // Garantir que o model-viewer pode capturar eventos de wheel
                     viewer.style.pointerEvents = 'auto';
-                    
+
                     // Adicionar atributos necessários para zoom se não existirem
                     if (!viewer.hasAttribute('camera-controls')) {
                         viewer.setAttribute('camera-controls', '');
@@ -1925,6 +2046,51 @@
                     }
                 });
             }, 100);
+        });
+
+        // Animação dos ícones de clientes ao entrar/sair da seção
+        document.addEventListener('DOMContentLoaded', function () {
+            const clienteSection = document.getElementById('Cliente-section');
+            const clientLogos = clienteSection ? clienteSection.querySelectorAll('.client-logo') : [];
+            let clienteSectionVisible = false;
+
+            function animateClientLogos(inView) {
+                clientLogos.forEach((el, i) => {
+                    setTimeout(() => {
+                        if (inView) {
+                            el.classList.add('animate-in');
+                            el.classList.remove('animate-out');
+                        } else {
+                            el.classList.remove('animate-in');
+                            el.classList.add('animate-out');
+                        }
+                    }, i * 80); // efeito cascata
+                });
+            }
+
+            function isSectionInViewport(section) {
+                const rect = section.getBoundingClientRect();
+                return (
+                    rect.top < window.innerHeight * 0.6 &&
+                    rect.bottom > window.innerHeight * 0.2
+                );
+            }
+
+            function onScrollClientes() {
+                if (!clienteSection) return;
+                const inView = isSectionInViewport(clienteSection);
+                if (inView && !clienteSectionVisible) {
+                    clienteSectionVisible = true;
+                    animateClientLogos(true);
+                } else if (!inView && clienteSectionVisible) {
+                    clienteSectionVisible = false;
+                    animateClientLogos(false);
+                }
+            }
+
+            window.addEventListener('scroll', onScrollClientes);
+            // Inicializa estado
+            onScrollClientes();
         });
     </script>
 </body>
