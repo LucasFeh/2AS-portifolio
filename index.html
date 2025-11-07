@@ -509,12 +509,13 @@
             background: linear-gradient(135deg, #FF6B6B, #EE5A52);
         }
 
-        #Cliente-section{
+        #Cliente-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap:50px; 
+            gap: 50px;
         }
+
         /* Estilos dos perfis profissionais */
         .profile-card {
             background: white;
@@ -879,7 +880,7 @@
         }
 
         /* Responsividade para tablets */
-        @media (max-width: 768px) {
+        @media (max-width: 1980px) {
             .map-container-large iframe {
                 width: 350px;
                 height: 250px;
@@ -899,9 +900,19 @@
             }
 
             .carousel-image {
-                width: 100%;
-                max-width: 600px;
-                height: 300px;
+                width: 80%;
+                height: 350px;
+                border-radius: 10px;
+            }
+
+            .carrossel_2 {
+                object-position: 25% 75%;
+                ;
+            }
+
+            .carrossel_4 {
+                object-position: 25% 80%;
+                ;
             }
 
             .projects-sidebar {
@@ -912,6 +923,17 @@
             .sidebar-tab {
                 padding: 12px 15px;
                 font-size: 0.9em;
+            }
+
+            .carousel-inner {
+                min-height: 400px;
+                max-height: 400px;
+                display: flex;
+                align-items: center;
+            }
+
+            .carousel-indicators {
+                bottom: 0px;
             }
         }
 
@@ -934,8 +956,8 @@
             }
 
             .carousel-inner {
-                min-height: 90vh;
-                max-height: 90vh;
+                min-height: 400px;
+                max-height: 500px;
                 display: flex;
                 align-items: center;
             }
@@ -967,7 +989,6 @@
                 max-width: 420px;
                 height: 300px;
                 margin: 0px auto 0;
-                border-radius: 0px;
             }
 
             /* Seção Sobre */
@@ -1296,11 +1317,19 @@
     </nav> -->
 
     <!-- Home -->
-    <header id="home">
-        <div class="container container-carrosel d-flex justify-content-center align-items-center">
+    <header id="home" class=" d-flex flex-column justify-content-center align-items-center text-center gap-4">
+        <div class="" style="z-index: 2; pointer-events: none;">
+            <h1 class="display-4 fw-bold mb-2" style="color: #fff; text-shadow: 0 2px 16px #000;">2AS Engenharia e
+                Soluções Metalúrgicas</h1>
+            <p class="lead" style="color: #fff; text-shadow: 0 2px 8px #000;">Precisão, tecnologia e qualidade em cada
+                detalhe.</p>
+        </div>
+        <div class="container container-carrosel position-relative d-flex justify-content-center align-items-center"
+            style="min-height: 420px;">
+            <!-- Título fixo sobreposto ao carrossel -->
             <!-- Carrossel Bootstrap -->
-            <div id="headerCarousel" class="carousel-slide carousel slide" data-bs-ride="carousel"
-                data-bs-interval="4000">
+            <div id="headerCarousel" class="carousel-slide carousel slide w-100" data-bs-ride="carousel"
+                data-bs-interval="4000" style="z-index: 1;">
                 <!-- Indicadores -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active"
@@ -1312,50 +1341,37 @@
                     <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
                 </div>
-
                 <!-- Slides -->
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <div class="carousel-content text-center">
-                            <h1 class="display-4 fw-bold mb-4">2AS Engenharia e Soluções Metalúrgicas</h1>
-                            <p class="lead">Precisão, tecnologia e qualidade em cada detalhe.</p>
                             <img src="src/Imagem_carrosel.jpg" alt="Usinagem de precisão"
                                 class="carousel-image carrossel_1 modal-image">
                         </div>
                     </div>
-
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                         <div class="carousel-content text-center">
-                            <h1 class="display-4 fw-bold mb-4">Inovação em Usinagem</h1>
-                            <p class="lead">Transformando suas ideias em realidade com alta precisão.</p>
                             <img src="src/imagem_carrosel2.jpg" alt="Máquina CNC"
                                 class="carousel-image carrossel_2 modal-image">
                         </div>
                     </div>
-
                     <!-- Slide 3 -->
                     <div class="carousel-item">
                         <div class="carousel-content text-center">
-                            <h1 class="display-3 fw-bold mb-4">Modelagem 3D Avançada</h1>
-                            <p class="lead">Protótipos e peças customizadas para todos os setores.</p>
                             <img src="src/imagem_carrosel3.jpg" alt="Impressão 3D"
                                 class="carousel-image carrossel_3 modal-image">
                         </div>
                     </div>
-
                     <!-- Slide 4 -->
                     <div class="carousel-item">
                         <div class="carousel-content text-center">
-                            <h1 class="display-4 fw-bold mb-4">Excelência Técnica</h1>
-                            <p class="lead">Soluções industriais com acabamento impecável.</p>
                             <img src="src/imagem_carrosel4.jpg" alt="Peças de precisão"
                                 class="carousel-image carrossel_4 modal-image">
                         </div>
                     </div>
                 </div>
-
                 <!-- Controles
                 <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -1496,9 +1512,8 @@
                                             <h5 class="card-title">Suporte de Motor</h5>
                                             <p class="card-text">Suporte em alumínio aeronáutico para redução de peso.
                                             </p>
-                                            <model-viewer
-                                                src="src/caldeiraria.glb"
-                                                alt="Suporte" auto-rotate camera-controls
+                                            <model-viewer src="src/caldeiraria.glb" alt="Suporte" auto-rotate
+                                                camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1526,9 +1541,8 @@
                                             <h5 class="card-title">Instrumento Cirúrgico</h5>
                                             <p class="card-text">Instrumento de precisão para procedimentos minimamente
                                                 invasivos.</p>
-                                            <model-viewer
-                                                src="src/compressor.glb"
-                                                alt="Instrumento" auto-rotate camera-controls autoplay
+                                            <model-viewer src="src/compressor.glb" alt="Instrumento" auto-rotate
+                                                camera-controls autoplay
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1555,9 +1569,8 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title">Estrutura Satelital</h5>
                                             <p class="card-text">Estrutura ultra-leve para aplicações espaciais.</p>
-                                            <model-viewer
-                                                src="src/ANDAIME.glb"
-                                                alt="Satelital" auto-rotate camera-controls
+                                            <model-viewer src="src/ANDAIME.glb" alt="Satelital" auto-rotate
+                                                camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1585,9 +1598,7 @@
                                             <h5 class="card-title">Modelo de Teste</h5>
                                             <p class="card-text">Protótipo para testes de resistência e funcionalidade.
                                             </p>
-                                            <model-viewer
-                                                src="src/PRINT 3D.glb"
-                                                alt="Teste" auto-rotate camera-controls
+                                            <model-viewer src="src/PRINT 3D.glb" alt="Teste" auto-rotate camera-controls
                                                 style="width:100%; height:300px; background:#f8f9fa; margin: 0 auto;">
                                             </model-viewer>
                                         </div>
@@ -1604,19 +1615,24 @@
                                         <div class="card-body text-center ">
                                             <h5 class="card-title">Base com mancais</h5>
                                             <p class="card-text">Foto real da peça.</p>
-                                            <div class="card-project-img "><video src="src/video usinagem.mp4" controls style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video></div>
+                                            <div class="card-project-img "><video src="src/video usinagem.mp4" controls
+                                                    style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <div class="card project-card border-0 shadow-sm h-100">
-                                    <div class="card project-card border-0 shadow-sm h-100">
-                                        <div class="card-body text-center ">
-                                            <h5 class="card-title">Base com mancais</h5>
-                                            <p class="card-text">Foto real da peça.</p>
-                                            <div class="card-project-img "><video src="src/video_apresentação.mp4" controls style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video></div>
+                                        <div class="card project-card border-0 shadow-sm h-100">
+                                            <div class="card-body text-center ">
+                                                <h5 class="card-title">Base com mancais</h5>
+                                                <p class="card-text">Foto real da peça.</p>
+                                                <div class="card-project-img "><video src="src/video_apresentação.mp4"
+                                                        controls
+                                                        style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;"></video>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -1808,7 +1824,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Footer interno -->
         <footer class="internal-footer">
             <div class="container">
