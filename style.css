@@ -255,7 +255,7 @@ section {
 }
 
 .project-card img {
-    max-height: 300px;
+    max-height: 550px;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -350,6 +350,8 @@ section {
 
 model-viewer {
     border-radius: 12px;
+    max-height: 550px;
+    min-height: 550px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -944,6 +946,20 @@ model-viewer {
     }
     #Cliente-section{
         gap: 0px !important;
+    }
+    model-viewer {
+        max-height: 300px !important;
+        min-height: 300px !important;
+    }
+    .project-card img {
+        max-height: 300px;
+    }
+    .card-project-img video{
+        max-height: 200px !important;
+        min-height: 200px !important;
+    }
+    .card-project-img video:hover{
+        cursor: pointer;
     }
 }
 
