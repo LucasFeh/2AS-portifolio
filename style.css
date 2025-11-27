@@ -926,6 +926,22 @@ model-viewer {
         bottom: 0px;
     }
 }
+/* Responsividade para tablets */
+@media (max-height: 680px) {
+    #contato{
+        max-height: 630px !important;
+    }
+    #contato .mb-5 {
+        margin-bottom: 5px !important;
+    }
+    .profile-card{
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    #Cliente-section{
+        gap: 0px !important;
+    }
+}
 
 /* Responsividade para smartphones */
 @media (max-width: 480px) {
