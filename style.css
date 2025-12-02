@@ -260,11 +260,13 @@ section {
     object-fit: cover;
     border-radius: 10px;
 }
-.card-project-img{
-   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-   border-radius: 10px;
-   max-height: 100%;
+
+.card-project-img {
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    border-radius: 10px;
+    max-height: 100%;
 }
+
 .project-card {
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
@@ -672,7 +674,9 @@ model-viewer {
 /* Estilos do mapa grande */
 .map-container-large {
     border-radius: 20px;
-    overflow: hidden;
+    background: #f50303;
+    min-width: 750px;
+    min-height: 550px;
     box-shadow: 0 15px 40px rgba(0, 180, 216, 0.4);
     margin: 0 auto;
     width: fit-content;
@@ -932,35 +936,51 @@ model-viewer {
         bottom: 0px;
     }
 }
+
 /* Responsividade para tablets */
 @media (max-height: 680px) {
-    #contato{
+    #contato {
         max-height: 630px !important;
     }
+
     #contato .mb-5 {
         margin-bottom: 5px !important;
     }
-    .profile-card{
+
+    .profile-card {
         margin-bottom: 0px;
         font-size: 15px;
     }
-    #Cliente-section{
+
+    #Cliente-section {
         gap: 0px !important;
     }
+
     model-viewer {
         max-height: 300px !important;
         min-height: 300px !important;
     }
+
     .project-card img {
         max-height: 300px;
     }
-    .card-project-img video{
+
+    .card-project-img video {
         max-height: 200px !important;
         min-height: 200px !important;
     }
-    .card-project-img video:hover{
+
+    .card-project-img video:hover {
         cursor: pointer;
     }
+
+    /* Estilos do mapa grande */
+    .map-container-large {
+        background: #6003f5;
+        min-width: 350px;
+        min-height: 250px;
+    }
+
 }
 
 /* Responsividade para smartphones */
@@ -1165,11 +1185,6 @@ model-viewer {
         padding: 30px 0 0 0;
     }
 
-    .map-container-large iframe {
-        width: 300px;
-        height: 200px;
-    }
-
     .address-text-large {
         font-size: 0.9rem;
         margin-top: 15px;
@@ -1280,6 +1295,13 @@ model-viewer {
         font-size: 50px;
         width: 50px;
         height: 50px;
+    }
+
+    .map-container-large {
+        background: #6003f5;
+        min-width: 350px;
+        min-height: 250px;
+        margin: 0 50px 0 0;
     }
 }
 
