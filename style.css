@@ -881,9 +881,10 @@ model-viewer {
 
 /* Responsividade para tablets */
 @media (max-width: 1980px) {
+
     .map-container-large iframe {
-        width: 350px;
-        height: 250px;
+        width: 100%;
+        min-height: 550px;
     }
 
     #footer-section {
@@ -939,6 +940,13 @@ model-viewer {
 
 /* Responsividade para tablets */
 @media (max-height: 680px) {
+
+
+    .map-container-large iframe {
+        width: 100%;
+        min-height: 250px;
+    }
+
     #contato {
         max-height: 630px !important;
     }
@@ -976,7 +984,6 @@ model-viewer {
 
     /* Estilos do mapa grande */
     .map-container-large {
-        background: #6003f5;
         min-width: 350px;
         min-height: 250px;
     }
@@ -985,6 +992,18 @@ model-viewer {
 
 /* Responsividade para smartphones */
 @media (max-width: 480px) {
+
+
+    .map-container-large {
+        min-height: 250px;
+        min-width: 250px;
+        background-color: #bcdd02;
+    }
+
+    .map-container-large iframe {
+        width: 250px;
+        min-height: 250px;
+    }
 
     /* Header e Carrossel */
     header {
@@ -1297,12 +1316,6 @@ model-viewer {
         height: 50px;
     }
 
-    .map-container-large {
-        background: #6003f5;
-        min-width: 350px;
-        min-height: 250px;
-        margin: 0 50px 0 0;
-    }
 }
 
 /* Animação lateral para os ícones de clientes */
